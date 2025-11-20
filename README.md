@@ -1,8 +1,13 @@
 # Evalys Arcium gMPC MXE
 
-**Unified Arcium MXE for Confidential Intel and gMPC Strategy Planning**
+**Unified [Arcium](https://arcium.com/) MXE for Confidential Intel and gMPC Strategy Planning**
 
-This repository contains the fused Arcium Multi-Party Execution Environment (MXE) that combines confidential intelligence operations with generalized Multi-Party Computation (gMPC) for encrypted intent processing.
+This repository contains the fused [Arcium Multi-Party Execution Environment (MXE)](https://docs.arcium.com/developers) that combines confidential intelligence operations with generalized Multi-Party Computation (gMPC) for encrypted intent processing.
+
+**Built with Arcium**: This MXE uses [Arcium's Arcis framework](https://docs.arcium.com/developers) to write confidential instructions in Rust. Learn more about Arcium:
+- [Arcium Developer Documentation](https://docs.arcium.com/developers)
+- [Arcium GitHub Organization](https://github.com/orgs/arcium-hq/)
+- [Arcium Discord Community](https://discord.com/invite/arcium)
 
 ## Overview
 
@@ -157,9 +162,15 @@ Both services can call the same MXE for different use cases.
 
 ## Development
 
+This MXE is built using [Arcium's development tools](https://docs.arcium.com/developers/installation). The `arcium` CLI is a wrapper over the `anchor` CLI that adds Arcium-specific functionality.
+
 ### Build
 
 ```bash
+# Using Arcium CLI (recommended)
+arcium build
+
+# Or using Anchor directly
 anchor build
 ```
 
@@ -176,6 +187,14 @@ anchor build
 anchor idl parse -f target/idl/evalys_arcium_gmpc_mxe.json -o types/
 ```
 
+### Arcium Development Resources
+
+- [Arcium Installation Guide](https://docs.arcium.com/developers/installation) - Set up Arcium development environment
+- [Hello World Tutorial](https://docs.arcium.com/developers/hello-world) - Create your first confidential instruction
+- [Computation Lifecycle](https://docs.arcium.com/developers/computation-lifecycle) - Understand how confidential computations work
+- [Arcium Examples](https://github.com/orgs/arcium-hq/) - Example Arcium applications
+- [TypeScript SDK](https://ts.arcium.com/api) - Client library documentation
+
 ## License
 
 MIT License - See LICENSE file for details.
@@ -183,4 +202,20 @@ MIT License - See LICENSE file for details.
 ## Repository
 
 `https://github.com/evalysfun/evalys-arcium-gmpc-mxe`
+
+## Arcium Resources
+
+**Learn More About Arcium**:
+- [Arcium Website](https://arcium.com/) - The encrypted supercomputer
+- [Arcium Developer Documentation](https://docs.arcium.com/developers) - Complete developer guide
+- [Arcium GitHub Organization](https://github.com/orgs/arcium-hq/) - Source code, examples, and tools
+- [Arcium Discord](https://discord.com/invite/arcium) - Join the community
+
+**Arcium enables**:
+- Privacy-preserving applications on Solana
+- Processing sensitive data while keeping it encrypted
+- Familiar tooling (Arcis extends Anchor)
+- Full composability within Solana ecosystem
+
+This MXE demonstrates how to build confidential computation applications using Arcium's technology. For more examples and tutorials, visit the [Arcium Developer Documentation](https://docs.arcium.com/developers).
 
