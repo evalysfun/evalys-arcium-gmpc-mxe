@@ -1,0 +1,29 @@
+# Rust
+target/
+**/*.rs.bk
+Cargo.lock
+
+# Anchor
+.anchor/
+test-ledger/
+*.log
+
+# IDL
+target/idl/
+target/types/
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+

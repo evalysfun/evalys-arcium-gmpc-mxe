@@ -1,0 +1,13 @@
+[workspace]
+members = [
+    "programs/*"
+]
+
+[programs.evalys-arcium-gmpc-mxe]
+name = "evalys-arcium-gmpc-mxe"
+version = "0.1.0"
+path = "programs/evalys-arcium-gmpc-mxe"
+
+[encrypted_instructions]
+path = "encrypted-ixs"
+
