@@ -249,6 +249,70 @@ To verify this MXE is production-ready:
 - ✅ **Do I know input/output types?** - Yes: See `docs/mxe-spec.md`
 - ✅ **Do I know receipt verification?** - Yes: See `docs/crypto.md`
 
+## Prerequisites
+
+Before building or deploying this MXE, you need:
+
+- **Rust** (latest stable version)
+- **Solana CLI 2.3.0** (install from [here](https://docs.solana.com/cli/install-solana-cli-tools), then run `solana-keygen new`)
+- **Yarn** (install from [here](https://yarnpkg.com/getting-started/install))
+- **Anchor 0.32.1** (install from [here](https://www.anchor-lang.com/docs/installation))
+- **Docker & Docker Compose** (install from [here](https://docs.docker.com/engine/install/))
+- **Arcium CLI** (for building and deploying Arcium programs)
+
+### ⚠️ Windows Support
+
+**Arcium CLI does not support Windows natively.** You must use **WSL2 (Windows Subsystem for Linux)**.
+
+See [INSTALLATION.md](INSTALLATION.md#wsl2-installation-for-windows-users) for detailed WSL2 setup instructions.
+
+### Installing Arcium CLI
+
+**Recommended Method** (Mac/Linux/WSL2):
+
+```bash
+# Official installation script (checks all dependencies)
+curl --proto '=https' --tlsv1.2 -sSfL https://install.arcium.com/ | bash
+
+# Verify installation
+arcium --version
+```
+
+This script will automatically:
+- ✅ Check for all required dependencies
+- ✅ Install Linux build dependencies (if needed)
+- ✅ Download and install `arcup` (Arcium version manager)
+- ✅ Install the latest Arcium CLI
+- ✅ Install the Arx Node
+
+**Manual Installation** (if script fails):
+
+See [INSTALLATION.md](INSTALLATION.md) or [QUICK_INSTALL.md](QUICK_INSTALL.md) for step-by-step manual installation.
+
+**For Full Arcium Features**: You'll need the Arcium CLI. Check [Arcium's official docs](https://docs.arcium.com/developers/installation) for the latest installation method.
+
+**Full Setup** (if you don't have prerequisites):
+
+```bash
+# 1. Install Rust (if needed)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# 2. Install Solana CLI (if needed)
+sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
+
+# 3. Install Anchor (if needed)
+cargo install --git https://github.com/coral-xyz/anchor avm --locked --force
+avm install 0.29.0
+avm use 0.29.0
+
+# 4. Install Arcium CLI
+cargo install arcium-cli
+```
+
+**Windows**: Use Windows installers for Rust and Solana, then use PowerShell for Cargo commands.
+
+See [INSTALLATION.md](INSTALLATION.md) for detailed installation instructions and troubleshooting.
+
 ## Development
 
 This MXE is built using [Arcium's development tools](https://docs.arcium.com/developers/installation). The `arcium` CLI is a wrapper over the `anchor` CLI that adds Arcium-specific functionality.
